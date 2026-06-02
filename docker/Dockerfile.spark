@@ -1,0 +1,10 @@
+FROM jupyter/pyspark-notebook:latest
+
+USER root
+
+RUN mkdir -p \
+    /home/jovyan/work/notebooks \
+    /home/jovyan/work/warehouse \
+    /home/jovyan/work/checkpoints
+
+USER ${NB_UID}
