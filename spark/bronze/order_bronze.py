@@ -1,6 +1,6 @@
 from pyspark.sql.functions import *
 
-from common.spark_session import get_spark
+from spark.common.spark_session import get_spark
 
 spark = get_spark()
 
@@ -21,6 +21,8 @@ df = (
         "subscribe",
         "order_events"
     )
+    .option("startingOffsets","earliest")
+    .option("failOnDataLoss","false")
     .load()
 )
 
@@ -39,7 +41,7 @@ query = (
     .outputMode("append")
     .option(
         "checkpointLocation",
-        "/home/jovyan/work/checkpoints/customer_bronze"
+        "/home/jovyan/work/checkpoints/order_bronze"
     )
     .toTable(
         "local.bronze.order_events"

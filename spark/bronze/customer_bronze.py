@@ -1,6 +1,6 @@
 from pyspark.sql.functions import *
 
-from common.spark_session import get_spark
+from spark.common.spark_session import get_spark
 
 spark = get_spark()
 
@@ -21,6 +21,8 @@ df = (
         "subscribe",
         "customer_events"
     )
+    .option("startingOffsets","earliest")
+    .option("failOnDataLoss","false")
     .load()
 )
 
