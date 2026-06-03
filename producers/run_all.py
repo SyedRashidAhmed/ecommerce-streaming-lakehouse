@@ -10,7 +10,19 @@ from common.constants import (
     ORDER_TOPIC
 )
 
-producer = get_producer()
+
+import time
+
+while True:
+    try:
+        producer = get_producer()
+        print("Connected to Kafka")
+        break
+
+    except Exception as e:
+        print(f"Waiting for Kafka: {e}")
+        time.sleep(5)
+
 
 
 async def customer_loop():
