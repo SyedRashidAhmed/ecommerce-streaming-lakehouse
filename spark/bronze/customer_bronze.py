@@ -48,4 +48,25 @@ query = (
     )
 )
 
-query.awaitTermination()
+from pyspark.sql.functions import to_json,struct
+BRONZE_RAW = "bronze_raw_customer_events"
+
+output_df = (
+    bronze_df.select(
+        to_json(
+            struct("*")
+        ).alias("value")
+    )
+)
+
+output_df1 = (output_df.writeStream.
+              format("kafka")
+              .option("kafka.bootstrap.servers","kafka:29092")
+              .option("topic",BRONZE_RAW)
+              .option("checkpointLocation",
+                      "/home/jovyan/work/checkpoints/customer_events_raw")
+              .start()        
+                      )
+
+
+spark.streams.awaitAnyTermination()
