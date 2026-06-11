@@ -1,0 +1,136 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "9c78f824-5a1d-4eb9-bc2b-3abf5df8dbe1",
+  "location" : "/home/jovyan/work/warehouse/bronze/product_events",
+  "last-sequence-number" : 2,
+  "last-updated-ms" : 1781115752306,
+  "last-column-id" : 6,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "raw_value",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "topic",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "partition",
+      "required" : false,
+      "type" : "int"
+    }, {
+      "id" : 4,
+      "name" : "offset",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 5,
+      "name" : "kafka_timestamp",
+      "required" : false,
+      "type" : "timestamptz"
+    }, {
+      "id" : 6,
+      "name" : "ingestion_time",
+      "required" : false,
+      "type" : "timestamptz"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "jovyan",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 5725940193894097151,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 5725940193894097151,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 7935458109111125234,
+    "timestamp-ms" : 1781114578223,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781114570441",
+      "spark.sql.streaming.epochId" : "0",
+      "spark.sql.streaming.queryId" : "bcb93a10-9449-4846-8570-5f3a7fd0cc97",
+      "added-data-files" : "1",
+      "added-records" : "100",
+      "added-files-size" : "6943",
+      "changed-partition-count" : "1",
+      "total-records" : "100",
+      "total-files-size" : "6943",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781114570441",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/bronze/product_events/metadata/snap-7935458109111125234-1-8085bca9-a664-48d5-a15b-912f06f09375.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 2,
+    "snapshot-id" : 5725940193894097151,
+    "parent-snapshot-id" : 7935458109111125234,
+    "timestamp-ms" : 1781115752306,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781115716945",
+      "spark.sql.streaming.epochId" : "0",
+      "spark.sql.streaming.queryId" : "c0c45546-ba62-4536-bb05-7764a021b0fa",
+      "added-data-files" : "1",
+      "added-records" : "100",
+      "added-files-size" : "6975",
+      "changed-partition-count" : "1",
+      "total-records" : "200",
+      "total-files-size" : "13918",
+      "total-data-files" : "2",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781115716945",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/bronze/product_events/metadata/snap-5725940193894097151-1-16d40893-1103-496c-a1b9-440130c007e5.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1781114578223,
+    "snapshot-id" : 7935458109111125234
+  }, {
+    "timestamp-ms" : 1781115752306,
+    "snapshot-id" : 5725940193894097151
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1781113647287,
+    "metadata-file" : "/home/jovyan/work/warehouse/bronze/product_events/metadata/v1.metadata.json"
+  }, {
+    "timestamp-ms" : 1781114578223,
+    "metadata-file" : "/home/jovyan/work/warehouse/bronze/product_events/metadata/v2.metadata.json"
+  } ]
+}
