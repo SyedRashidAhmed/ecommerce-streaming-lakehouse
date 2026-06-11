@@ -9,3 +9,4 @@ kafka-topics --create --topic silver_customer_events --partitions 3 --replicatio
 kafka-topics --create --topic silver_order_events --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
 kafka-topics --create --topic silver_customer_events_dlq --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
 kafka-topics --create --topic silver_order_events_dlq --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+kafka-topics --create --topic product_events --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
