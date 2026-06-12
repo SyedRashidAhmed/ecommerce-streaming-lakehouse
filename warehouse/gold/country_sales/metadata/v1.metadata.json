@@ -1,0 +1,78 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "665f156c-080d-46b8-b735-459db5dccfb3",
+  "location" : "/home/jovyan/work/warehouse/gold/country_sales",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1781186019961,
+  "last-column-id" : 2,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "country",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "revenue",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "jovyan",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 4976020026360171722,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 4976020026360171722,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 4976020026360171722,
+    "timestamp-ms" : 1781186019961,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781186005830",
+      "added-data-files" : "1",
+      "added-records" : "35",
+      "added-files-size" : "1258",
+      "changed-partition-count" : "1",
+      "total-records" : "35",
+      "total-files-size" : "1258",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781186005830",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/country_sales/metadata/snap-4976020026360171722-1-1fa1ab90-e543-4057-92b3-830d5af759e9.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1781186019961,
+    "snapshot-id" : 4976020026360171722
+  } ],
+  "metadata-log" : [ ]
+}

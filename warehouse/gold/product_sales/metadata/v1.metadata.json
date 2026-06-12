@@ -1,0 +1,93 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "02a8ac9f-e50e-40f1-8121-caf0d8bd0e89",
+  "location" : "/home/jovyan/work/warehouse/gold/product_sales",
+  "last-sequence-number" : 1,
+  "last-updated-ms" : 1781186022861,
+  "last-column-id" : 5,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "product_id",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "product_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "category",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 4,
+      "name" : "units_sold",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 5,
+      "name" : "revenue",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "jovyan",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 2485559501870327940,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 2485559501870327940,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 2485559501870327940,
+    "timestamp-ms" : 1781186022861,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781186005830",
+      "added-data-files" : "1",
+      "added-records" : "75",
+      "added-files-size" : "2705",
+      "changed-partition-count" : "1",
+      "total-records" : "75",
+      "total-files-size" : "2705",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781186005830",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/product_sales/metadata/snap-2485559501870327940-1-8b629e72-cbe9-4d2e-99c1-555ad4c3de26.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1781186022861,
+    "snapshot-id" : 2485559501870327940
+  } ],
+  "metadata-log" : [ ]
+}
