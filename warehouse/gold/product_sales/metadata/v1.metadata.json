@@ -1,9 +1,9 @@
 {
   "format-version" : 2,
-  "table-uuid" : "02a8ac9f-e50e-40f1-8121-caf0d8bd0e89",
+  "table-uuid" : "290993e0-626c-4135-8dc4-648d08240012",
   "location" : "/home/jovyan/work/warehouse/gold/product_sales",
   "last-sequence-number" : 1,
-  "last-updated-ms" : 1781186022861,
+  "last-updated-ms" : 1781260883631,
   "last-column-id" : 5,
   "current-schema-id" : 0,
   "schemas" : [ {
@@ -51,43 +51,40 @@
     "owner" : "jovyan",
     "write.parquet.compression-codec" : "zstd"
   },
-  "current-snapshot-id" : 2485559501870327940,
+  "current-snapshot-id" : 2508146547225068061,
   "refs" : {
     "main" : {
-      "snapshot-id" : 2485559501870327940,
+      "snapshot-id" : 2508146547225068061,
       "type" : "branch"
     }
   },
   "snapshots" : [ {
     "sequence-number" : 1,
-    "snapshot-id" : 2485559501870327940,
-    "timestamp-ms" : 1781186022861,
+    "snapshot-id" : 2508146547225068061,
+    "timestamp-ms" : 1781260883631,
     "summary" : {
       "operation" : "append",
-      "spark.app.id" : "local-1781186005830",
-      "added-data-files" : "1",
-      "added-records" : "75",
-      "added-files-size" : "2705",
-      "changed-partition-count" : "1",
-      "total-records" : "75",
-      "total-files-size" : "2705",
-      "total-data-files" : "1",
+      "spark.app.id" : "local-1781260768224",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
       "total-delete-files" : "0",
       "total-position-deletes" : "0",
       "total-equality-deletes" : "0",
       "engine-version" : "3.5.0",
-      "app-id" : "local-1781186005830",
+      "app-id" : "local-1781260768224",
       "engine-name" : "spark",
       "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
     },
-    "manifest-list" : "/home/jovyan/work/warehouse/gold/product_sales/metadata/snap-2485559501870327940-1-8b629e72-cbe9-4d2e-99c1-555ad4c3de26.avro",
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/product_sales/metadata/snap-2508146547225068061-1-7371c4d0-84e2-4e95-af4e-8279d28dfa04.avro",
     "schema-id" : 0
   } ],
   "statistics" : [ ],
   "partition-statistics" : [ ],
   "snapshot-log" : [ {
-    "timestamp-ms" : 1781186022861,
-    "snapshot-id" : 2485559501870327940
+    "timestamp-ms" : 1781260883631,
+    "snapshot-id" : 2508146547225068061
   } ],
   "metadata-log" : [ ]
 }

@@ -1,27 +1,38 @@
 from spark.common.spark_session import get_spark
 
-spark = get_spark()
 
-orders_df = spark.table("local.silver.order_events")
+def build_fact_orders():
 
-fact_orders = (
-    orders_df
-    .select(
-        "order_id",
-        "customer_id",
-        "product_id",
-        "quantity",
-        "unit_price",
-        "total_amount",
-        "event_date"
+    spark = get_spark()
+
+    spark.sql("""
+        CREATE NAMESPACE IF NOT EXISTS local.gold
+    """)
+
+    orders_df = spark.table(
+        "local.silver.order_events"
     )
-)
 
-(
-    fact_orders.writeTo("local.gold.fact_orders")
-    .using("iceberg")
-    .partitionedBy("event_date")
-    .createOrReplace()
-)
+    fact_orders = (
+        orders_df
+        .select(
+            "order_id",
+            "customer_id",
+            "product_id",
+            "quantity",
+            "unit_price",
+            "total_amount",
+            "event_time",
+            "event_date"
+        )
+    )
 
-print("fact_orders loaded")
+    (
+        fact_orders.write
+        .format("iceberg")
+        .mode("overwrite")
+        .partitionBy("event_date")
+        .saveAsTable("local.gold.fact_orders")
+    )
+
+    print("fact_orders loaded")

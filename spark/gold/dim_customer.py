@@ -1,27 +1,51 @@
+from pyspark.sql.window import Window
+from pyspark.sql.functions import row_number, desc
 from spark.common.spark_session import get_spark
 
-spark = get_spark()
 
-customer_df = spark.table("local.silver.customer_events")
+def build_dim_customer():
 
-dim_customer = (
-    customer_df
-    .select(
-        "customer_id",
-        "first_name",
-        "last_name",
-        "email",
-        "country",
-        "city",
-        "event_date"
+    spark = get_spark()
+
+    spark.sql("""
+        CREATE NAMESPACE IF NOT EXISTS local.gold
+    """)
+
+    customer_df = spark.table(
+        "local.silver.customer_events"
     )
-    .dropDuplicates(["customer_id"])
-)
 
-(
-    dim_customer.writeTo("local.gold.dim_customer")
-    .using("iceberg")
-    .createOrReplace()
-)
+    window_spec = (
+        Window
+        .partitionBy("customer_id")
+        .orderBy(desc("event_time"))
+    )
 
-print("dim_customer loaded")
+    dim_customer = (
+        customer_df
+        .withColumn(
+            "rn",
+            row_number().over(window_spec)
+        )
+        .filter("rn = 1")
+        .drop("rn")
+        .select(
+            "customer_id",
+            "first_name",
+            "last_name",
+            "email",
+            "country",
+            "city",
+            "event_time",
+            "event_date"
+        )
+    )
+
+    (
+        dim_customer.write
+        .format("iceberg")
+        .mode("overwrite")
+        .saveAsTable("local.gold.dim_customer")
+    )
+
+    print("dim_customer loaded")

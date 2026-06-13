@@ -1,9 +1,9 @@
 {
   "format-version" : 2,
-  "table-uuid" : "053b27d1-c765-4e22-b0f2-0f748db8c04c",
+  "table-uuid" : "58b3d5b4-140c-44ff-ba32-8b48e7700e53",
   "location" : "/home/jovyan/work/warehouse/gold/customer_lifetime_value",
   "last-sequence-number" : 1,
-  "last-updated-ms" : 1781186024654,
+  "last-updated-ms" : 1781260891166,
   "last-column-id" : 2,
   "current-schema-id" : 0,
   "schemas" : [ {
@@ -36,43 +36,40 @@
     "owner" : "jovyan",
     "write.parquet.compression-codec" : "zstd"
   },
-  "current-snapshot-id" : 8174909586521787303,
+  "current-snapshot-id" : 2213370116988354707,
   "refs" : {
     "main" : {
-      "snapshot-id" : 8174909586521787303,
+      "snapshot-id" : 2213370116988354707,
       "type" : "branch"
     }
   },
   "snapshots" : [ {
     "sequence-number" : 1,
-    "snapshot-id" : 8174909586521787303,
-    "timestamp-ms" : 1781186024654,
+    "snapshot-id" : 2213370116988354707,
+    "timestamp-ms" : 1781260891166,
     "summary" : {
       "operation" : "append",
-      "spark.app.id" : "local-1781186005830",
-      "added-data-files" : "1",
-      "added-records" : "37",
-      "added-files-size" : "1116",
-      "changed-partition-count" : "1",
-      "total-records" : "37",
-      "total-files-size" : "1116",
-      "total-data-files" : "1",
+      "spark.app.id" : "local-1781260768224",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
       "total-delete-files" : "0",
       "total-position-deletes" : "0",
       "total-equality-deletes" : "0",
       "engine-version" : "3.5.0",
-      "app-id" : "local-1781186005830",
+      "app-id" : "local-1781260768224",
       "engine-name" : "spark",
       "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
     },
-    "manifest-list" : "/home/jovyan/work/warehouse/gold/customer_lifetime_value/metadata/snap-8174909586521787303-1-ff3241bc-225c-4da1-839b-e88bc583e8c5.avro",
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/customer_lifetime_value/metadata/snap-2213370116988354707-1-d5e94f1f-09c1-4b6c-b2bd-04a434c39645.avro",
     "schema-id" : 0
   } ],
   "statistics" : [ ],
   "partition-statistics" : [ ],
   "snapshot-log" : [ {
-    "timestamp-ms" : 1781186024654,
-    "snapshot-id" : 8174909586521787303
+    "timestamp-ms" : 1781260891166,
+    "snapshot-id" : 2213370116988354707
   } ],
   "metadata-log" : [ ]
 }

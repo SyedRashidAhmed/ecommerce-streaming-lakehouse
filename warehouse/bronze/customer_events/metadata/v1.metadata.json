@@ -1,9 +1,9 @@
 {
   "format-version" : 2,
-  "table-uuid" : "b8c3ee23-e249-41f8-89db-0c44abc24e86",
+  "table-uuid" : "ecda1762-b844-4059-996e-d97b740dae3f",
   "location" : "/home/jovyan/work/warehouse/bronze/customer_events",
   "last-sequence-number" : 0,
-  "last-updated-ms" : 1781177566205,
+  "last-updated-ms" : 1781260536779,
   "last-column-id" : 6,
   "current-schema-id" : 0,
   "schemas" : [ {

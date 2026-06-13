@@ -1,9 +1,9 @@
 {
   "format-version" : 2,
-  "table-uuid" : "3ca26a2e-028b-4435-9f92-2cbf6ad5bbae",
+  "table-uuid" : "2b91a97b-a45b-42ae-bd6e-e4190d1d9267",
   "location" : "/home/jovyan/work/warehouse/silver/order_events",
   "last-sequence-number" : 0,
-  "last-updated-ms" : 1781177729826,
+  "last-updated-ms" : 1781260732616,
   "last-column-id" : 15,
   "current-schema-id" : 0,
   "schemas" : [ {

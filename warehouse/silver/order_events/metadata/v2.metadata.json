@@ -1,9 +1,9 @@
 {
   "format-version" : 2,
-  "table-uuid" : "3ca26a2e-028b-4435-9f92-2cbf6ad5bbae",
+  "table-uuid" : "2b91a97b-a45b-42ae-bd6e-e4190d1d9267",
   "location" : "/home/jovyan/work/warehouse/silver/order_events",
   "last-sequence-number" : 1,
-  "last-updated-ms" : 1781177783682,
+  "last-updated-ms" : 1781260884567,
   "last-column-id" : 15,
   "current-schema-id" : 0,
   "schemas" : [ {
@@ -106,45 +106,48 @@
     "owner" : "jovyan",
     "write.parquet.compression-codec" : "zstd"
   },
-  "current-snapshot-id" : 762067392358299919,
+  "current-snapshot-id" : 7845888190507753659,
   "refs" : {
     "main" : {
-      "snapshot-id" : 762067392358299919,
+      "snapshot-id" : 7845888190507753659,
       "type" : "branch"
     }
   },
   "snapshots" : [ {
     "sequence-number" : 1,
-    "snapshot-id" : 762067392358299919,
-    "timestamp-ms" : 1781177783682,
+    "snapshot-id" : 7845888190507753659,
+    "timestamp-ms" : 1781260884567,
     "summary" : {
       "operation" : "append",
-      "spark.app.id" : "local-1781177719876",
+      "spark.app.id" : "local-1781260708176",
       "spark.sql.streaming.epochId" : "0",
-      "spark.sql.streaming.queryId" : "c9de3dbb-a8da-43ec-a1ea-bd58b68232ea",
-      "changed-partition-count" : "0",
-      "total-records" : "0",
-      "total-files-size" : "0",
-      "total-data-files" : "0",
+      "spark.sql.streaming.queryId" : "f692d114-c104-426f-83be-de5bed143f94",
+      "added-data-files" : "1",
+      "added-records" : "1",
+      "added-files-size" : "4641",
+      "changed-partition-count" : "1",
+      "total-records" : "1",
+      "total-files-size" : "4641",
+      "total-data-files" : "1",
       "total-delete-files" : "0",
       "total-position-deletes" : "0",
       "total-equality-deletes" : "0",
       "engine-version" : "3.5.0",
-      "app-id" : "local-1781177719876",
+      "app-id" : "local-1781260708176",
       "engine-name" : "spark",
       "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
     },
-    "manifest-list" : "/home/jovyan/work/warehouse/silver/order_events/metadata/snap-762067392358299919-1-c89ab4d7-ac35-4bf1-961a-e30a56ee6b0e.avro",
+    "manifest-list" : "/home/jovyan/work/warehouse/silver/order_events/metadata/snap-7845888190507753659-1-205dac6d-a17c-4e6a-9a96-bb41a5573d86.avro",
     "schema-id" : 0
   } ],
   "statistics" : [ ],
   "partition-statistics" : [ ],
   "snapshot-log" : [ {
-    "timestamp-ms" : 1781177783682,
-    "snapshot-id" : 762067392358299919
+    "timestamp-ms" : 1781260884567,
+    "snapshot-id" : 7845888190507753659
   } ],
   "metadata-log" : [ {
-    "timestamp-ms" : 1781177729826,
+    "timestamp-ms" : 1781260732616,
     "metadata-file" : "/home/jovyan/work/warehouse/silver/order_events/metadata/v1.metadata.json"
   } ]
 }

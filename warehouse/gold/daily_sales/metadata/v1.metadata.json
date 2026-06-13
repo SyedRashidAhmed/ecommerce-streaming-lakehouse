@@ -1,9 +1,9 @@
 {
   "format-version" : 2,
-  "table-uuid" : "78984637-9034-44f2-90da-74483a506b05",
+  "table-uuid" : "762d48eb-336d-4a14-8c52-434ca4e9f137",
   "location" : "/home/jovyan/work/warehouse/gold/daily_sales",
   "last-sequence-number" : 1,
-  "last-updated-ms" : 1781186016792,
+  "last-updated-ms" : 1781260862294,
   "last-column-id" : 2,
   "current-schema-id" : 0,
   "schemas" : [ {
@@ -36,43 +36,40 @@
     "owner" : "jovyan",
     "write.parquet.compression-codec" : "zstd"
   },
-  "current-snapshot-id" : 8824522877042581893,
+  "current-snapshot-id" : 2465843566425519705,
   "refs" : {
     "main" : {
-      "snapshot-id" : 8824522877042581893,
+      "snapshot-id" : 2465843566425519705,
       "type" : "branch"
     }
   },
   "snapshots" : [ {
     "sequence-number" : 1,
-    "snapshot-id" : 8824522877042581893,
-    "timestamp-ms" : 1781186016792,
+    "snapshot-id" : 2465843566425519705,
+    "timestamp-ms" : 1781260862294,
     "summary" : {
       "operation" : "append",
-      "spark.app.id" : "local-1781186005830",
-      "added-data-files" : "1",
-      "added-records" : "1",
-      "added-files-size" : "711",
-      "changed-partition-count" : "1",
-      "total-records" : "1",
-      "total-files-size" : "711",
-      "total-data-files" : "1",
+      "spark.app.id" : "local-1781260768224",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
       "total-delete-files" : "0",
       "total-position-deletes" : "0",
       "total-equality-deletes" : "0",
       "engine-version" : "3.5.0",
-      "app-id" : "local-1781186005830",
+      "app-id" : "local-1781260768224",
       "engine-name" : "spark",
       "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
     },
-    "manifest-list" : "/home/jovyan/work/warehouse/gold/daily_sales/metadata/snap-8824522877042581893-1-bc23f566-5b1b-43ce-bb9b-f9ca0bee0649.avro",
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/daily_sales/metadata/snap-2465843566425519705-1-8886e06c-5471-4a67-8580-d81895ce1f53.avro",
     "schema-id" : 0
   } ],
   "statistics" : [ ],
   "partition-statistics" : [ ],
   "snapshot-log" : [ {
-    "timestamp-ms" : 1781186016792,
-    "snapshot-id" : 8824522877042581893
+    "timestamp-ms" : 1781260862294,
+    "snapshot-id" : 2465843566425519705
   } ],
   "metadata-log" : [ ]
 }
