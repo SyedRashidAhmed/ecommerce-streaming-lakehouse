@@ -1,0 +1,300 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "ed744524-6cc4-4b0a-ad6f-9bfd28c6b86f",
+  "location" : "/home/jovyan/work/warehouse/gold/top_products",
+  "last-sequence-number" : 8,
+  "last-updated-ms" : 1781362920251,
+  "last-column-id" : 5,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "product_id",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "product_name",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 3,
+      "name" : "category",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 4,
+      "name" : "units_sold",
+      "required" : false,
+      "type" : "long"
+    }, {
+      "id" : 5,
+      "name" : "revenue",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "jovyan",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 4103922773597551277,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 4103922773597551277,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 7392173038840401905,
+    "timestamp-ms" : 1781260906420,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781260768224",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781260768224",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-7392173038840401905-1-d26c7af2-a7e3-46c6-aa2b-f54cc4c44a79.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 2,
+    "snapshot-id" : 3039253311536399698,
+    "timestamp-ms" : 1781355800522,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781355779051",
+      "added-data-files" : "1",
+      "added-records" : "10",
+      "added-files-size" : "1887",
+      "changed-partition-count" : "1",
+      "total-records" : "10",
+      "total-files-size" : "1887",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781355779051",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-3039253311536399698-1-ea283cef-ba42-4071-9302-1b2b7951623c.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 3,
+    "snapshot-id" : 2764942477800295479,
+    "timestamp-ms" : 1781356826430,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781356806341",
+      "added-data-files" : "1",
+      "added-records" : "10",
+      "added-files-size" : "1887",
+      "changed-partition-count" : "1",
+      "total-records" : "10",
+      "total-files-size" : "1887",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781356806341",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-2764942477800295479-1-b2e17b05-2cec-4ca8-a421-43e91ea77c75.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 4,
+    "snapshot-id" : 5984323691106018227,
+    "timestamp-ms" : 1781359415682,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781359380373",
+      "added-data-files" : "1",
+      "added-records" : "10",
+      "added-files-size" : "1887",
+      "changed-partition-count" : "1",
+      "total-records" : "10",
+      "total-files-size" : "1887",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781359380373",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-5984323691106018227-1-7aefe002-8a77-4baa-96e6-9fa616e11e29.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 5,
+    "snapshot-id" : 2574573809473429159,
+    "timestamp-ms" : 1781359995778,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781359955938",
+      "added-data-files" : "1",
+      "added-records" : "10",
+      "added-files-size" : "1887",
+      "changed-partition-count" : "1",
+      "total-records" : "10",
+      "total-files-size" : "1887",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781359955938",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-2574573809473429159-1-a8a73fe6-0d66-4c57-a852-b7feecb40195.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 6,
+    "snapshot-id" : 7194541154735845467,
+    "timestamp-ms" : 1781360373433,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781360341359",
+      "added-data-files" : "1",
+      "added-records" : "10",
+      "added-files-size" : "1887",
+      "changed-partition-count" : "1",
+      "total-records" : "10",
+      "total-files-size" : "1887",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781360341359",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-7194541154735845467-1-f303414b-5653-4b80-aa6c-89a1500e2569.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 7,
+    "snapshot-id" : 6900922763605948397,
+    "timestamp-ms" : 1781360738888,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781360582905",
+      "added-data-files" : "1",
+      "added-records" : "10",
+      "added-files-size" : "1887",
+      "changed-partition-count" : "1",
+      "total-records" : "10",
+      "total-files-size" : "1887",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781360582905",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-6900922763605948397-1-4f71e8ab-4b94-4008-9081-3a3017fc43e3.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 8,
+    "snapshot-id" : 4103922773597551277,
+    "timestamp-ms" : 1781362920251,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781362825944",
+      "added-data-files" : "1",
+      "added-records" : "10",
+      "added-files-size" : "1884",
+      "changed-partition-count" : "1",
+      "total-records" : "10",
+      "total-files-size" : "1884",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781362825944",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/top_products/metadata/snap-4103922773597551277-1-8ccdfd4b-88d4-4985-aeae-061937c5e0c7.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1781260906420,
+    "snapshot-id" : 7392173038840401905
+  }, {
+    "timestamp-ms" : 1781355800522,
+    "snapshot-id" : 3039253311536399698
+  }, {
+    "timestamp-ms" : 1781356826430,
+    "snapshot-id" : 2764942477800295479
+  }, {
+    "timestamp-ms" : 1781359415682,
+    "snapshot-id" : 5984323691106018227
+  }, {
+    "timestamp-ms" : 1781359995778,
+    "snapshot-id" : 2574573809473429159
+  }, {
+    "timestamp-ms" : 1781360373433,
+    "snapshot-id" : 7194541154735845467
+  }, {
+    "timestamp-ms" : 1781360738888,
+    "snapshot-id" : 6900922763605948397
+  }, {
+    "timestamp-ms" : 1781362920251,
+    "snapshot-id" : 4103922773597551277
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1781260906420,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/top_products/metadata/v1.metadata.json"
+  }, {
+    "timestamp-ms" : 1781355800522,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/top_products/metadata/v2.metadata.json"
+  }, {
+    "timestamp-ms" : 1781356826430,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/top_products/metadata/v3.metadata.json"
+  }, {
+    "timestamp-ms" : 1781359415682,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/top_products/metadata/v4.metadata.json"
+  }, {
+    "timestamp-ms" : 1781359995778,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/top_products/metadata/v5.metadata.json"
+  }, {
+    "timestamp-ms" : 1781360373433,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/top_products/metadata/v6.metadata.json"
+  }, {
+    "timestamp-ms" : 1781360738888,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/top_products/metadata/v7.metadata.json"
+  } ]
+}
