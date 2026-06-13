@@ -1,0 +1,105 @@
+{
+  "format-version" : 2,
+  "table-uuid" : "519a90c8-f763-43b7-b251-82bfc81fcdce",
+  "location" : "/home/jovyan/work/warehouse/gold/country_sales",
+  "last-sequence-number" : 2,
+  "last-updated-ms" : 1781355795322,
+  "last-column-id" : 2,
+  "current-schema-id" : 0,
+  "schemas" : [ {
+    "type" : "struct",
+    "schema-id" : 0,
+    "fields" : [ {
+      "id" : 1,
+      "name" : "country",
+      "required" : false,
+      "type" : "string"
+    }, {
+      "id" : 2,
+      "name" : "revenue",
+      "required" : false,
+      "type" : "double"
+    } ]
+  } ],
+  "default-spec-id" : 0,
+  "partition-specs" : [ {
+    "spec-id" : 0,
+    "fields" : [ ]
+  } ],
+  "last-partition-id" : 999,
+  "default-sort-order-id" : 0,
+  "sort-orders" : [ {
+    "order-id" : 0,
+    "fields" : [ ]
+  } ],
+  "properties" : {
+    "owner" : "jovyan",
+    "write.parquet.compression-codec" : "zstd"
+  },
+  "current-snapshot-id" : 5017721230214496450,
+  "refs" : {
+    "main" : {
+      "snapshot-id" : 5017721230214496450,
+      "type" : "branch"
+    }
+  },
+  "snapshots" : [ {
+    "sequence-number" : 1,
+    "snapshot-id" : 4437075782927914354,
+    "timestamp-ms" : 1781260874370,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781260768224",
+      "changed-partition-count" : "0",
+      "total-records" : "0",
+      "total-files-size" : "0",
+      "total-data-files" : "0",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781260768224",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/country_sales/metadata/snap-4437075782927914354-1-33aea02f-4d39-4c0b-9f92-788c9b931068.avro",
+    "schema-id" : 0
+  }, {
+    "sequence-number" : 2,
+    "snapshot-id" : 5017721230214496450,
+    "timestamp-ms" : 1781355795322,
+    "summary" : {
+      "operation" : "append",
+      "spark.app.id" : "local-1781355779051",
+      "added-data-files" : "1",
+      "added-records" : "25",
+      "added-files-size" : "1074",
+      "changed-partition-count" : "1",
+      "total-records" : "25",
+      "total-files-size" : "1074",
+      "total-data-files" : "1",
+      "total-delete-files" : "0",
+      "total-position-deletes" : "0",
+      "total-equality-deletes" : "0",
+      "engine-version" : "3.5.0",
+      "app-id" : "local-1781355779051",
+      "engine-name" : "spark",
+      "iceberg-version" : "Apache Iceberg 1.6.1 (commit 8e9d59d299be42b0bca9461457cd1e95dbaad086)"
+    },
+    "manifest-list" : "/home/jovyan/work/warehouse/gold/country_sales/metadata/snap-5017721230214496450-1-ac0c5585-b34d-43f1-ad3d-ba699fde8f89.avro",
+    "schema-id" : 0
+  } ],
+  "statistics" : [ ],
+  "partition-statistics" : [ ],
+  "snapshot-log" : [ {
+    "timestamp-ms" : 1781260874370,
+    "snapshot-id" : 4437075782927914354
+  }, {
+    "timestamp-ms" : 1781355795322,
+    "snapshot-id" : 5017721230214496450
+  } ],
+  "metadata-log" : [ {
+    "timestamp-ms" : 1781260874370,
+    "metadata-file" : "/home/jovyan/work/warehouse/gold/country_sales/metadata/v1.metadata.json"
+  } ]
+}
