@@ -1,0 +1,455 @@
+# 🚀 Real-Time E-Commerce Lakehouse
+
+> **An end-to-end real-time data engineering platform that ingests, processes, transforms, and analyzes streaming e-commerce events using Apache Kafka, PySpark Structured Streaming, Apache Iceberg, Airflow, and Docker.**
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
+![PySpark](https://img.shields.io/badge/PySpark-Structured%20Streaming-orange?logo=apachespark)
+![Kafka](https://img.shields.io/badge/Apache-Kafka-black?logo=apachekafka)
+![Iceberg](https://img.shields.io/badge/Apache-Iceberg-blue)
+![Airflow](https://img.shields.io/badge/Apache-Airflow-017CEE?logo=apacheairflow)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?logo=docker)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+---
+
+## 📖 Overview
+
+Modern e-commerce platforms generate thousands of customer interactions every second. Traditional batch pipelines struggle to process this continuously growing data with low latency.
+
+This project demonstrates a **production-inspired Modern Data Lakehouse** that captures streaming customer, product, and order events, processes them through a **Medallion Architecture**, stores them in **Apache Iceberg**, and generates analytics-ready datasets for business intelligence.
+
+The entire platform is fully containerized using Docker and orchestrated using Apache Airflow.
+
+---
+
+# 🎯 Problem Statement
+
+E-commerce businesses require:
+
+- Near real-time order processing
+- Customer behavior analytics
+- Revenue reporting
+- Product performance tracking
+- Reliable ETL pipelines
+- Scalable cloud-ready architecture
+
+Traditional batch ETL pipelines introduce delays and increase operational complexity.
+
+This project solves these challenges by building a streaming Data Lakehouse using modern open-source technologies.
+
+---
+
+# ✨ Features
+
+- ✅ Real-time event streaming using Apache Kafka
+- ✅ Synthetic data generation using Faker
+- ✅ PySpark Structured Streaming pipelines
+- ✅ Bronze → Silver → Gold Medallion Architecture
+- ✅ Apache Iceberg Lakehouse
+- ✅ ACID Transactions
+- ✅ Schema Evolution
+- ✅ Time Travel
+- ✅ Dead Letter Queue (DLQ)
+- ✅ Star Schema Modeling
+- ✅ Automated Airflow DAGs
+- ✅ Fully Dockerized Environment
+- ✅ Analytics-ready aggregate tables
+
+---
+
+# 🏗️ Architecture
+
+```
+                +---------------------+
+                |  Event Producers    |
+                |---------------------|
+                | Customers           |
+                | Products            |
+                | Orders              |
+                +----------+----------+
+                           |
+                           |
+                     Apache Kafka
+                           |
+                           |
+                  PySpark Structured
+                     Streaming Jobs
+                           |
+               -------------------------
+               |         Bronze         |
+               -------------------------
+                           |
+                    Data Validation
+                    Data Cleaning
+                    Standardization
+                           |
+               -------------------------
+               |         Silver         |
+               -------------------------
+                           |
+                 Star Schema Modeling
+                           |
+               -------------------------
+               |          Gold          |
+               -------------------------
+                           |
+                Business Aggregations
+                           |
+                 Reporting & Analytics
+```
+
+---
+
+# 🥇 Medallion Architecture
+
+## Bronze Layer
+
+Raw streaming events are ingested directly from Kafka.
+
+**Responsibilities**
+
+- Store raw data
+- Preserve original events
+- Support replay capability
+- Maintain immutable records
+
+---
+
+## Silver Layer
+
+Data is validated and transformed.
+
+### Processing includes
+
+- Removing invalid records
+- Standardizing schemas
+- Data cleansing
+- Type casting
+- Deduplication
+- Null handling
+
+Invalid records are redirected into a **Dead Letter Queue (DLQ)** ensuring zero data loss.
+
+---
+
+## Gold Layer
+
+Business-ready dimensional models optimized for analytics.
+
+### Dimension Tables
+
+- `dim_customer`
+- `dim_product`
+
+### Fact Table
+
+- `fact_orders`
+
+All Gold tables are managed using **Apache Iceberg** with:
+
+- ACID Transactions
+- Schema Evolution
+- Time Travel
+- Efficient Partitioning
+
+---
+
+# 📊 Analytics Layer
+
+The Gold Layer powers business intelligence through pre-computed aggregate tables.
+
+## Daily Sales
+
+Revenue by order date.
+
+---
+
+## Country Sales
+
+Revenue distribution across countries.
+
+---
+
+## Product Sales
+
+- Units sold
+- Revenue
+- Product performance
+
+---
+
+## Customer Lifetime Value (LTV)
+
+Total revenue generated by each customer.
+
+---
+
+# 🛠️ Technology Stack
+
+| Layer | Technology |
+|----------|------------------------------|
+| Language | Python |
+| Streaming | Apache Kafka |
+| Processing | PySpark Structured Streaming |
+| Storage | Apache Iceberg |
+| Orchestration | Apache Airflow |
+| Infrastructure | Docker & Docker Compose |
+| Data Generation | Faker |
+| Metadata | Iceberg Catalog |
+| Data Modeling | Star Schema |
+| Architecture | Medallion Architecture |
+
+---
+
+# 📂 Project Structure
+
+```
+Real-Time-E-Commerce-Lakehouse/
+
+│
+├── producers/
+│   ├── customer_producer.py
+│   ├── product_producer.py
+│   └── order_producer.py
+│
+├── streaming/
+│   ├── bronze_jobs/
+│   ├── silver_jobs/
+│   └── gold_jobs/
+│
+├── airflow/
+│   ├── dags/
+│   └── plugins/
+│
+├── iceberg/
+│
+├── docker/
+│
+├── sql/
+│
+├── analytics/
+│
+├── notebooks/
+│
+├── docker-compose.yml
+│
+└── README.md
+```
+
+---
+
+# 🔄 Data Pipeline
+
+```
+Python Producers
+        │
+        ▼
+Apache Kafka Topics
+        │
+        ▼
+Bronze Layer
+        │
+        ▼
+Validation & Cleaning
+        │
+        ▼
+Silver Layer
+        │
+        ▼
+Dimension + Fact Tables
+        │
+        ▼
+Gold Layer
+        │
+        ▼
+Aggregate Tables
+        │
+        ▼
+Business Analytics
+```
+
+---
+
+# ⚙️ Workflow Orchestration
+
+Apache Airflow automates the complete ETL workflow.
+
+### DAG Responsibilities
+
+- Bronze ingestion
+- Silver transformations
+- Gold table creation
+- Aggregate refresh
+- Logging
+- Retry mechanisms
+- Scheduling
+- Monitoring
+
+---
+
+# 📈 Data Model
+
+The Gold Layer follows a **Star Schema**.
+
+```
+               dim_customer
+                    |
+                    |
+                    |
+fact_orders ---------------- dim_product
+```
+
+---
+
+# 🚀 Getting Started
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/real-time-ecommerce-lakehouse.git
+
+cd real-time-ecommerce-lakehouse
+```
+
+---
+
+## Start Docker Environment
+
+```bash
+docker-compose up -d
+```
+
+---
+
+## Start Kafka Producers
+
+```bash
+python customer_producer.py
+
+python product_producer.py
+
+python order_producer.py
+```
+
+---
+
+## Start Streaming Jobs
+
+```bash
+spark-submit bronze_job.py
+
+spark-submit silver_job.py
+
+spark-submit gold_job.py
+```
+
+---
+
+## Launch Airflow
+
+```bash
+http://localhost:8080
+```
+
+Run the DAG to automate the entire pipeline.
+
+---
+
+# 📊 Business Insights Generated
+
+The project generates valuable business metrics such as:
+
+- Daily Revenue
+- Revenue by Country
+- Product Performance
+- Customer Lifetime Value
+- Sales Trends
+- Customer Segmentation
+
+---
+
+# 📌 Key Learnings
+
+During this project, I gained hands-on experience with:
+
+- Apache Kafka
+- PySpark Structured Streaming
+- Apache Iceberg
+- Data Lakehouse Architecture
+- Medallion Architecture
+- Airflow DAG Development
+- Star Schema Design
+- Dockerized Data Platforms
+- Streaming ETL Pipelines
+- Data Validation
+- Data Quality Management
+- Schema Evolution
+- Time Travel
+- Distributed Data Processing
+
+---
+
+# 🚀 Future Enhancements
+
+- Deploy on Microsoft Azure
+- Spark on Kubernetes
+- dbt Integration
+- CI/CD Pipelines
+- Prometheus Monitoring
+- Grafana Dashboards
+- Real-Time BI Dashboards
+- Feature Store for Machine Learning
+- Data Quality Testing with Great Expectations
+- Delta Sharing / Data APIs
+
+---
+
+# 📸 Architecture Screenshots
+
+> Add screenshots of:
+
+- Overall Architecture
+- Airflow DAG
+- Kafka UI
+- Iceberg Tables
+- Spark Jobs
+- Gold Tables
+- Analytics Output
+
+Example:
+
+```
+docs/
+├── architecture.png
+├── airflow_dag.png
+├── kafka_ui.png
+├── iceberg_tables.png
+├── analytics_dashboard.png
+```
+
+---
+
+# 🎯 Resume Highlights
+
+- Designed and implemented an end-to-end real-time Data Lakehouse using Apache Kafka, PySpark Structured Streaming, Apache Iceberg, Airflow, and Docker.
+- Built scalable Bronze, Silver, and Gold data pipelines following the Medallion Architecture.
+- Developed streaming ETL pipelines processing customer, product, and order events with fault-tolerant architecture.
+- Implemented dimensional modeling using Star Schema and generated business-ready analytical datasets.
+- Automated end-to-end workflows using Apache Airflow with monitoring, scheduling, retries, and centralized logging.
+- Leveraged Apache Iceberg features including ACID transactions, schema evolution, and time travel for reliable analytics.
+
+---
+
+# 👨‍💻 Author
+
+**Syed Rashid Ahmed**
+
+**Data Engineer | Azure | PySpark | Apache Spark | Kafka | Databricks | Airflow | SQL**
+
+GitHub: https://github.com/SyedRashidAhmed
+
+LinkedIn: linkedin.com/in/syed-rashid-ahmed-381327263
+
+---
+
+## ⭐ If you found this project useful, consider giving it a Star!
