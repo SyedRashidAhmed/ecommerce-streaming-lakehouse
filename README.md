@@ -306,7 +306,7 @@ fact_orders ---------------- dim_product
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/real-time-ecommerce-lakehouse.git
+git clone https://github.com/SyedRashidAhmed/ecommerce-streaming-lakehouse.git
 
 cd real-time-ecommerce-lakehouse
 ```
@@ -401,31 +401,6 @@ During this project, I gained hands-on experience with:
 - Feature Store for Machine Learning
 - Data Quality Testing with Great Expectations
 - Delta Sharing / Data APIs
-
----
-
-# 📸 Architecture Screenshots
-
-> Add screenshots of:
-
-- Overall Architecture
-- Airflow DAG
-- Kafka UI
-- Iceberg Tables
-- Spark Jobs
-- Gold Tables
-- Analytics Output
-
-Example:
-
-```
-docs/
-├── architecture.png
-├── airflow_dag.png
-├── kafka_ui.png
-├── iceberg_tables.png
-├── analytics_dashboard.png
-```
 
 ---
 
