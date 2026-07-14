@@ -59,44 +59,7 @@ This project solves these challenges by building a streaming Data Lakehouse usin
 
 # 🏗️ Architecture
 
-```
-                +---------------------+
-                |  Event Producers    |
-                |---------------------|
-                | Customers           |
-                | Products            |
-                | Orders              |
-                +----------+----------+
-                           |
-                           |
-                     Apache Kafka
-                           |
-                           |
-                  PySpark Structured
-                     Streaming Jobs
-                           |
-               -------------------------
-               |         Bronze         |
-               -------------------------
-                           |
-                    Data Validation
-                    Data Cleaning
-                    Standardization
-                           |
-               -------------------------
-               |         Silver         |
-               -------------------------
-                           |
-                 Star Schema Modeling
-                           |
-               -------------------------
-               |          Gold          |
-               -------------------------
-                           |
-                Business Aggregations
-                           |
-                 Reporting & Analytics
-```
+![Architecture](docs/ecommerce_arch.png)
 
 ---
 
