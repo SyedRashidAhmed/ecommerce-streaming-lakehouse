@@ -59,7 +59,7 @@ This project solves these challenges by building a streaming Data Lakehouse usin
 
 # 🏗️ Architecture
 
-![Architecture](docs/ecommerce_arc.png)
+![Architecture](docs/ecommerce_arch.png)
 
 ---
 
